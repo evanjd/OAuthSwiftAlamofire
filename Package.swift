@@ -32,12 +32,11 @@ let package = Package(
         .library(name: "OAuthSwiftAlamofire", targets: ["OAuthSwiftAlamofire"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/OAuthSwift/OAuthSwift.git", .branch("2.1.0")),
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .branch("5.0.0-rc.1")),
+        .package(url: "https://github.com/evanjd/OAuthSwift.git", .branch("master")),
+        .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.0.0-rc.3"),
     ],
     targets: [
-        .target(name: "OAuthSwiftAlamofire", dependencies: ["OAuthSwift", "Alamofire"], path: "Sources"),
-        .testTarget(name: "OAuthSwiftAlamofireTests", dependencies: ["OAuthSwiftAlamofire"], path: "Tests"),
+        .target(name: "OAuthSwiftAlamofire", dependencies: ["OAuthSwift", "Alamofire"], path: "Sources")
     ],
     swiftLanguageVersions: [.v5]
 )
